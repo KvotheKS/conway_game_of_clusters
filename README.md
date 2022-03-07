@@ -29,6 +29,6 @@ Na simulação foram disponibilizadas duas variáveis controláveis por usuário
 
 Para fins de análise do programa, logo abaixo da simulação em questão, há um gráfico que mostra qual é a média de clusterização do programa.
 
-A cada 15 passos da simulação são gravados dois arquivos em disco: agent.csv e model.csv, que guardam informações de agente e modelo respectivamente. As variáveis de agente estão relacionadas a posição e quantidade de vizinhos (caso a célula esteja viva), e as variáveis de modelo estão relacionadas a média de clusterização da simulação.
+A cada 15 passos da simulação são gravados dois arquivos em disco: agent.csv e model.csv, que guardam informações de agente e modelo respectivamente. As variáveis de agente estão relacionadas a posição e quantidade de vizinhos (caso a célula esteja viva), e as variáveis de modelo estão relacionadas a média de clusterização da simulação. Esses dados em questão foram utilizados para mostrar que o estado inicial do jogo importa apenas para as primeiras iterações, além disso, podemos ver que alterações extremas na chance de uma célula reviver acabam em duas situações diversas. Caso células raramente voltem a vida, pequenos clusters se estabilizam por mais tempo, e raramente novos grupos surgem por mais de 1 iteração. Caso elas voltem constantemente, os agrupamentos "vêm e voltam", pois células de grandes clusters também morrem.
 
-Esses arquivos se encontram na pasta "conways_game_of_life". Os arquivos .csv que já se encontram na pasta foram resultados de simulações feitas no dia 06/03/2022
+Esses arquivos se encontram na pasta "conways_game_of_life". Os arquivos .csv que já se encontram na pasta foram resultados de simulações feitas no dia 06/03/2022.
