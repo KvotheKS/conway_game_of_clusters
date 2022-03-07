@@ -28,7 +28,6 @@ class ConwaysGameOfLife(Model):
         # be done because each cell's next state depends on the current
         # state of all its neighbors -- before they've changed.
         self.schedule = SimultaneousActivation(self)
-        self.n = 0
         # Use a simple grid, where edges wrap around.
         self.grid = Grid(width, height, torus=True)
         self.datacollector = DataCollector(
@@ -36,7 +35,7 @@ class ConwaysGameOfLife(Model):
                 "Density": neighborhood_mean,
             },
             agent_reporters={
-                "Alive": lambda x: sum(1 for _ in x.neighbors) if x.isAlive else -1,
+                "Alive": lambda x: sum(1 for y in x.neighbors if y.isAlive) if x.isAlive else -1,
             },
         )
 
@@ -59,8 +58,7 @@ class ConwaysGameOfLife(Model):
         """
         self.schedule.step()
         self.datacollector.collect(self)
-        self.n += 1
-        if self.n == 15:
+        if self.schedule.steps % 15 == 0:
             l_agent = self.datacollector.get_agent_vars_dataframe()
             l_model = self.datacollector.get_model_vars_dataframe()
             l_agent.to_csv('agent.csv')
