@@ -15,10 +15,12 @@ Para instalar a biblioteca Mesa, basta utilizar o seguinte comando:
 
 Para usar o programa, basta executar o script run.py, para isso foi utilizado o seguinte comando no terminal:
 
-* python3 run.py
+* python3 /conways_game_of_life/run.py
 
 Na simulação foram disponibilizadas duas variáveis controláveis por usuário, uma que determina a chance inicial das células estarem vivas, e outra que determina a chance de células mortas renascerem.
 
 Para fins de análise do programa, logo abaixo da simulação em questão, há um gráfico que mostra qual é a média de clusterização do programa.
 
 A cada 15 passos da simulação são gravados dois arquivos em disco: agent.csv e model.csv, que guardam informações de agente e modelo respectivamente. As variáveis de agente estão relacionadas a posição e quantidade de vizinhos (caso a célula esteja viva), e as variáveis de modelo estão relacionadas a média de clusterização da simulação.
+
+Esses arquivos se encontram na pasta "conways_game_of_life".
