@@ -6,6 +6,10 @@ As mudanças feitas no Game of Life foram para tornar o jogo mais aleatório e m
 
 Essa simulação funciona de maneira que o estado inicial acaba importando bem menos que no Game of Life, dado o fato de que células podem renascer aleatóriamente.
 
+### Hipótese causal
+
+As mudanças feitas no modelo inicial foram feitos com o objetivo de fazer uma simulação em que o estado inicial pouco importa, e também uma análise de como a chance de cada célula renascer afeta a clusterização delas. A hipótese principal é de que a chance de voltar a vida está diretamente relacionada ao tamanho médio dos clusters e também está relacionada a instabilidade do sistema.
+
 ### Instalação dos requisitos e execução do programa
 
 Para a utilização do programa, foram utilizados:
