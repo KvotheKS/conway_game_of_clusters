@@ -1,3 +1,11 @@
+from .cell import Cell
+
+def decide_color(cell):
+    res = 'black' if cell.isAlive else 'white'
+    if cell.owner != -1:
+        return Cell.colors[cell.owner]
+    return res
+
 def portrayCell(cell):
     """
     This function is registered with the visualization server to be called
@@ -14,5 +22,5 @@ def portrayCell(cell):
         "Layer": 0,
         "x": cell.x,
         "y": cell.y,
-        "Color": "black" if cell.isAlive else "white",
+        "Color": decide_color(cell),
     }
